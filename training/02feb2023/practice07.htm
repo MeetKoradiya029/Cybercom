@@ -8,49 +8,92 @@
     <link rel="stylesheet" href="practice07.css" />
   </head>
   <body>
-    <fieldset>
-      <legend>Your Address</legend>
-      <div class="input-wrapper">
-        <label for="firstname">First Name</label>&nbsp;
-        <input type="text" name="firstname" />
-      </div>
-      <div class="input-wrapper">
-        <label for="lastname">Last Name</label>&nbsp;&nbsp;
-        <input type="text" name="lastname" />
-      </div>
-      <div class="input-wrapper">
-        <label for="Street">Street</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <input type="text" name="street">
-      </div>
-      <div class="input-wrapper">
-        <label for="city">City</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <input type="text" name="city">
-      </div>
-    </fieldset>
-    <fieldset>
+
+    <form action="/training/02feb2023/pract07submited.htm">
+      <fieldset>
+        <legend>Your Address</legend>
+        <div class="address-wrapper">
+          <div class="label-wrapper">
+            <label for="firstname" class="label-ar">First Name</label>
+            <label for="lastname" class="label-ar">Last Name</label>
+            <label for="Street" class="label-ar">Street</label>
+            <label for="city" class="label-ar">City</label>
+          </div>
+          <div class="input-wrapper">
+            <input type="text" name="firstname" class="input-ar" />
+            <input type="text" name="lastname" class="input-ar" />
+            <input type="text" name="street" class="input-ar" />
+            <input type="text" name="city" class="input-ar" />
+          </div>
+        </div>
+      </fieldset>
+      <fieldset>
         <legend>Additional Details</legend>
-        <div class="input-wrapper">
-            <label for="biography">Biography</label>&nbsp;&nbsp
-            <textarea name="biography" cols="20" rows="3"></textarea>
-        </div>
-        <div class="input-wrapper">
-            <label for="image">Image</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <input type="file" name="file">
-        </div>
-        <div class="input-wrapper">
-            <label for="agegroup">Age Group</label>&nbsp;&nbsp;
-            <select name="agegroup" id="agegroup">
-                <option value="">0 to 9 </option>
-                <option value="">10 to 19</option>
+        <div class="details-wrapper">
+          <div class="label-wrapper-details">
+            <label for="biography" class="label-bio">Biography</label>
+            <label for="image" class="label-ar">Image</label>
+            <label for="agegroup" class="label-ar">Age Group</label>
+          </div>
+          <div class="input-wrapper-details">
+            <textarea
+              name="biography"
+              cols="20"
+              rows="3"
+              class="input-ar"
+            ></textarea>
+            <input type="file" name="file" class="input-ar" />
+            <select name="agegroup" id="agegroup" class="input-ar">
+              <option value="">0 to 9</option>
+              <option value="">10 to 19</option>
             </select>
+          </div>
         </div>
-    </fieldset>
-    <fieldset>
+      </fieldset>
+      <fieldset>
         <legend>Interests</legend>
-        <div class="input-wrapper">
-            <label for="hobbies">Hobbies</label>&nbsp;&nbsp;&nbsp;&nbsp;
-            <input type="checkbox" name="playing soccer">&nbsp;Playing Soccer
+
+        <div class="label-wrapper-intr">
+          <label for="hobbies" class="h-label">Hobbies</label>
+          <input type="checkbox" name="soccer" />&nbsp;Playing Soccer
+          <input type="checkbox" name="dancing" />&nbsp;Dancing
+          <input
+            type="checkbox"
+            name="gardening"
+            class="hobbies-ar"
+          />&nbsp;Gardening
+          <input type="checkbox" name="movies" />&nbsp;Watching Movies
         </div>
-    </fieldset>
+
+        <div class="label-car">
+          <label for="favcar" class="car-opt">Favourite Car?</label>
+          <select name="car-select" id="car">
+            <option value="1">Volvo</option>
+            <option value="2">Land Rover</option>
+            <option value="">Fortuner</option>
+            <option value="3">BMW</option>
+          </select>
+        </div>
+        <div class="transport">
+          <div class="label-wrapper-transport">
+            <label for="pub-trans" class="label-trasport"
+              >Favourite Public Transport?</label
+            >
+          </div>
+          <div class="trasport-select">
+            <select name="public-trans" id="transport">
+              <option value="1">By Bus</option>
+              <option value="2">By Train</option>
+              <option value="3">By Water</option>
+              <option value="4">By Airway</option>
+            </select>
+          </div>
+        </div>
+      </fieldset>
+    <div class="buttons">
+      <input type="submit" id="submit" name="submit" />
+      <input type="reset" id="reset" name="reset" />
+    </div>
+    </form>
   </body>
 </html>

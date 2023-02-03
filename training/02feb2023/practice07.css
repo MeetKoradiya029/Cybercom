@@ -3,5 +3,68 @@
     flex-direction: column;
 }
 .input-wrapper{
+    display: flex;
+    flex-direction: column;
+    margin-left: 177px;
+    justify-content: space-between;
+    
+}
+.address-wrapper{
+    display: flex;
+    flex-direction: row;
+
+}
+.label-wrapper{
+    display: flex;
+    flex-direction: column;
+}
+
+.label-wrapper-details{
+    display: flex;
+    flex-direction: column;
+}
+.input-wrapper-details{
+  display: flex;
+  flex-direction: column;
+  margin-left: 186px;
+
+}
+.input-ar{
     margin: 7px;
+}
+.label-ar{
+    margin: 7px;
+}
+.details-wrapper{
+    display: flex;
+    flex-direction: row;
+}
+.h-label{
+    margin-right: 212px;
+}
+.car-opt{
+    margin-right: 152px;
+}
+.label-car{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.transport{
+    display: flex;
+    flex-direction: row;
+}
+.label-trasport{
+    margin-right: 40px;
+}
+.label-bio{
+    margin-bottom: 50px;
+    margin-left: 10px;
+}
+textarea{
+    resize: none;
+}
+.buttons{
+    display: flex;
+    justify-items: center;
+
 }
