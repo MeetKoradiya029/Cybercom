@@ -63,8 +63,19 @@
 textarea{
     resize: none;
 }
-.buttons{
-    display: flex;
-    justify-items: center;
+.buttons input{
+    
+    margin-top: 20px;
+    margin-bottom: auto;
+    background-color: aqua;
+    border: 0px;
+    width: 80px;
+    height: 30px;
+    border-radius: 10px;
 
 }
+.buttons{
+    margin-left: 42%;
+
+}
+
