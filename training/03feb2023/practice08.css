@@ -1,0 +1,98 @@
+.main{
+    width: max-content;
+    margin: 10px auto;
+    border: 1px solid rgb(209, 209, 209);
+    background-color: aliceblue;
+    padding: 5px;
+    
+}
+
+.form01{
+    display: flex;
+    flex-direction: row;
+    margin-left: 50px;
+}
+.labels-form01{
+    display: flex;
+    flex-direction: column;
+}
+.inputs-form01{
+    display: flex;
+    flex-direction: column;
+}
+.labels01{
+    margin-right: 40px;
+    margin: 9px;
+}
+.inputs01{
+    margin: 8px;
+    margin-left: 52px;
+}
+.heading{
+    font-weight:900;
+    font-size: 18px;
+    margin: 10px;
+}
+.form02{
+    display: flex;
+    flex-direction: row;
+    margin-left: 55px;
+}
+.labels-form02{
+    display: flex;
+    flex-direction: column;
+}
+.inputs-form02{
+    display: flex;
+    flex-direction: column;
+}
+.labels02{
+    
+    margin: 9px;
+}
+.inputs02{
+ margin-left: 100px; 
+ margin: 8px;  
+}
+input{
+    width: 250px;
+}
+
+.form03{
+    display: flex;
+    flex-direction: row;
+    margin-left: 60px;
+
+}
+
+.labels-form03{
+    display: flex;
+    flex-direction: column;
+}
+.inputs-form03{
+    display: flex;
+    flex-direction: column;
+    margin-left: 75px;
+
+}
+.labels03{
+    margin:10px;
+
+}
+.inputs03{
+    margin:10px;
+}
+.phone-label{
+    margin-left: 70px;
+    margin-right: 113px;
+
+}
+.phone-input{
+    width: 100px;
+}
+button{
+    margin-left: 42%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+

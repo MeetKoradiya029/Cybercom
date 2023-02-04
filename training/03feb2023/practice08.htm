@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>practice08</title>
+    <link rel="stylesheet" href="practice08.css" />
+  </head>
+  <body>
+    <div class="main">
+      <form name="form1"action="#">
+        <p class="heading">Personal Information</p>
+        <div class="form01">
+          <div class="labels-form01">
+            <label for="firstname" class="labels01">First Name:</label>
+            <label for="lastname" class="labels01">Last Name:</label>
+            <label for="birthdate" class="labels01">Date of Birth:</label>
+            <label for="gender" class="labels01">Gender:</label>
+          </div>
+          <div class="inputs-form01">
+            <input
+              type="text"
+              id="firstname"
+              name="firstname"
+              class="inputs01"
+              required
+              maxlength="20"
+              minlength="3"
+            />
+            <input
+              type="text"
+              id="lastname"
+              name="lastname"
+              class="inputs01"
+              maxlength="20"
+              minlength="3"
+              required
+            />
+            <input
+              type="date"
+              id="dateofbirth"
+              name="dateofbirth"
+              class="inputs01"
+              required
+            />
+            <select name="gender" id="gender" class="inputs01" required>
+              <option value="1">Male</option>
+              <option value="2">Female</option>
+            </select>
+          </div>
+        </div>
+        <p class="heading">Account Information</p>
+        <div class="form02">
+          <div class="labels-form02">
+            <label for="email" class="labels02">Email:</label>
+            <label for="email02" class="labels02">Re-type Email:</label>
+            <label for="password" class="labels02">Password:</label>
+            <label for="password02" class="labels02">Re-type Password:</label>
+            <label for="sec-que" class="labels02">Security Question:</label>
+            <label for="sec-ans" class="labels02">Security Answer:</label>
+          </div>
+          <div class="inputs-form02">
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="inputs02"
+              required
+            />
+            <input
+              type="email"
+              id="email02"
+              name="email02"
+              class="inputs02"
+              required
+            />
+            <input
+              type="password"
+              id="password"
+              name="password"
+              class="inputs02"
+              required
+            />
+            <input
+              type="password"
+              id="password02"
+              name="password02"
+              class="inputs02"
+              required
+            />
+            <select name="sec-que" id="sec-que" class="inputs02">
+              <option value="" disabled selected hidden>
+                Choose a security question
+              </option>
+              <option value="1">Which is your favourite colour?</option>
+              <option value="2">What is your school name?</option>
+            </select>
+            <input type="text" id="sec-ans" name="sec-ans" class="inputs02" />
+          </div>
+        </div>
+        <p class="heading">Contact Information</p>
+        <div class="form03">
+          <div class="labels-form03">
+            <label for="address" class="labels03">Address:</label>
+            <label for="city" class="labels03">City:</label>
+            <label for="state" class="labels03">State:</label>
+            <label for="zipcode" class="labels03">Zip Code:</label>
+          </div>
+          <div class="inputs-form03">
+            <input type="text" id="address" name="address" class="inputs03" />
+            <input type="text" id="city" name="city" class="inputs03" />
+            <select name="state" id="state" class="inputs03">
+              <option value="" disabled selected hidden>Select state</option>
+              <option value="1">Gujarat</option>
+              <option value="2">Maharashtra</option>
+              <option value="3">Madhya Pradesh</option>
+              <option value="4">Hariyana</option>
+              <option value="5">Punjab</option>
+              <option value="6">J&K</option>
+              <option value="7">Himachal Pradesh</option>
+              <option value="8">Rajasthan</option>
+              <option value="9">Goa</option>
+            </select>
+            <input type="text" id="zipcode" name="zipcode" class="inputs03" />
+          </div>
+        </div>
+        <label for="phone" class="phone-label">Phone:</label>
+        <input
+          type="text"
+          id="phone"
+          name="phone"
+          class="phone-input"
+          required
+        />
+        <select name="contact-no" id="contact-no">
+          <option value="1">Mobile</option>
+          <option value="2">Telephone</option></select
+        ><br />
+        <button type="submit" onclick="validate()">Submit</button>
+      </form>
+    </div>
+    <script src="practice08.js"></script>
+  </body>
+</html>
