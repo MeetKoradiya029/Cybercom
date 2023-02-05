@@ -48,19 +48,7 @@ function validate() {
 
 }
 
-function selector(){
-  let select_state = document.getElementById("state").value;
-  let cities = document.querySelectorAll("optgroup")
 
-  cities.forEach(element => {
-    if(element.id != select_state){
-      element.style.display="none"
-    }
-  });
-  
-
-  console.log(select_state);
-}
   
 
 
