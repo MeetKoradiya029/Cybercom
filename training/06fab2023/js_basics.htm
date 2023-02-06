@@ -1,34 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Js Basics</title>
-    
-</head>
-<body>
-    <script src="js_basics.js"></script>
+    <link rel="stylesheet" href="js_basics.css" />
+  </head>
+  <body>
     <div id="id">
-        <p id="para">Id selector example</p>
-        <p class="class">selecting by class name</p>
-        <p class="class">query selector</p>
-        <p class="para1">abc</p>
-        <p class="para1">xyz</p>
-        <p id="txt_content">
-            modify text content
-        </p>
-        <div class="div01 d-none">
-            hello world!
-        </div>
-        <button onclick="query_selector()">query_selector</button>
-        <button onclick="change()">Change</button>
-        <button onclick="adjecent_html()">adjecent_html</button>
-        <button onclick="classList()">classList</button>
-        <!-- <button onclick="getAttribute()">getAttribute</button> -->
-    </div>
-    
-    
-</body>
+      <p id="para">Id selector example</p>
+      <p class="class">selecting by class name</p>
+      <p class="class">query selector</p>
+      <p class="para1">abc</p>
+      <p class="para1">xyz</p>
+      <p id="txt_content">modify text content</p>
+      <div class="div01 d-none">hello world!</div>
+      <button onclick="query_selector()">query_selector</button>
 
+      <button onclick="change()">Change</button>
+
+      <button onclick="adjecent_html()">adjecent_html</button>
+
+      <input type="button" value="classList" onclick="classlist()" />
+      <button onclick="create_element()">Create element</button>
+      <button onclick="remove_child">remove child</button>
+      <!-- <button onclick="getAttribute()">getAttribute</button> -->
+    </div>
+    <script src="js_basics.js"></script>
+  </body>
 </html>

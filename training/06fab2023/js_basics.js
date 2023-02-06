@@ -6,7 +6,14 @@ function query_selector() {
   x[1].innerHTML = "query selector all";
   y.innerHTML = "query selector";
 }
+//class list
+function classlist() {
+  var div = document.querySelector(".div01");
 
+  div.classList.remove("d-none");
+}
+
+//class name and tag name:
 function change() {
   //select by class name:
   var collection = document.getElementsByClassName("class");
@@ -24,6 +31,7 @@ function change() {
   console.log(text_content);
 }
 
+//insert adjecent html: 
 function adjecent_html() {
   var p = document.getElementById("txt_content");
   let html = "<div>added</div>";
@@ -33,16 +41,28 @@ function adjecent_html() {
   p.insertAdjacentHTML("beforeend", html);
 }
 
-  var para = document.getElementById("para");
-   var attr = para.getAttribute("id");
-para.setAttribute("name","demopara");
+var para = document.getElementById("para");
+var attr = para.getAttribute("id");
+para.setAttribute("name", "demopara");
 
-  console.log(attr);
+console.log(attr);
 
-  function classList(){
-    var div = document.querySelector(".div01");
+//create element:
+function create_element() {
+  var main = document.getElementById("id");
 
-    div.classList.remove("d-none");
+  var newDiv = document.createElement("div");
+
+  var div_data = document.createTextNode("created using append child");
+
+  newDiv.appendChild(div_data);
+
+  document.getElementById("id").appendChild(newDiv);
+
   
-  }
- 
+}
+
+function remove_child(){
+  var main = document.getElementById("id");
+  main.removeChild("")
+}
