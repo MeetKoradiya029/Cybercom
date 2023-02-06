@@ -1,0 +1,93 @@
+.main{
+    padding: 2px;
+}
+
+
+h2,h3, .que01{
+    color: rgb(4, 159, 159);
+}
+
+.employee-stmnt{
+    border:2px solid rgb(22, 183, 183);
+    padding-left: 8px;
+    /* display: grid; */
+
+}
+.grid-container{
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 10px;
+    row-gap: 15px;
+}
+.benifits{
+    margin-top: 10px;
+    border:2px solid rgb(22, 183, 183);
+    padding-left: 8px;
+    padding-bottom: 10px;
+}
+.dob,.policy_num,.certi_no{
+    margin: 2px;
+}
+
+.after-yes{
+    margin-top: 10px;
+    
+}
+
+.d-none{
+    display: none;
+}
+
+.emp-stmt{
+    border-top: 0px;
+    border-left:0px ;
+    border-right: 0px;
+    outline: none;
+    border-bottom: 1px solid grey;
+    width: 200px;
+}
+#p-name{
+    width: 100px;
+}
+#dob{
+    width: 110px;
+}
+#plan{
+    width: 100px;
+}
+#total-charge{
+    width: 100px;
+}
+p{
+    color: rgb(90, 87, 87);
+}
+label{
+    color: rgb(90, 87, 87);
+}
+table{
+    border-top: 3px solid rgb(22, 131, 131);
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 10px;
+
+}
+.button{
+    background-color: aqua;
+    margin-top: 10px;
+    border: none;
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
+}
+.subtxt02{
+    margin-bottom: 2px;
+}
+.subtxt01{
+    margin-bottom: 2px;
+}
+.div02{
+    margin-top: 10px;
+}
+.subheading{
+    margin-bottom: 3px;
+}

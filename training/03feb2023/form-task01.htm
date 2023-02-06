@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Health Care</title>
+    <link rel="stylesheet" href="form-task01.css" />
+  </head>
+  <body>
+    <div class="main">
+      <h2 class="heading">Health Care Insurance</h2>
+      <p class="subheading">Complete all answers in capital latters</p>
+      
+      <div class="employee-stmnt">
+        <h3 class="heading01">EMPLOYEE STATEMENT</h3>
+        <div class="grid-container">
+        <div class="field01">
+          <label for="group-contact-number">Group Contact Number:</label>
+          <input type="text" class="emp-stmt" required />
+        </div>
+        <div class="field02">
+          <label for="certi-num">Cerificate number:</label>
+          <input type="number" class="emp-stmt" required />
+        </div> 
+        <div class="field03">
+          <label for="">Employee first and last name:</label></label>&nbsp;
+          <input type="text" class="emp-stmt" required />
+        </div>
+        <div class="field04">
+          <label for="birthdate">Date of Birth(DD/MM/YY):</label>&nbsp;
+          <input type="date" required />
+        </div>
+        <div class="field05">
+          <label for="address">Employee Address:</label>&nbsp;
+        <input type="text" class="emp-stmt" required />
+        </div>
+      </div>
+        <p class="que01">
+          Would you like your claims and payments deposited into your bank
+          account?
+        </p>
+        <input type="checkbox" class="check" required />&nbsp;
+        <label for="">Yes | I have included a valid cheque.</label>
+        <p class="txt01">
+          Please note that only one time valid cheque is required.If you change
+          your banking information a new void cheque will be needed.
+        </p>
+      </div>
+      <div class="benifits">
+        <h3 class="heading02">COORDINATION OF BENIFITS</h3>
+        <p class="subtxt01">
+          1.Does you're spouse and/or children have coverage under any other
+          medical plan or contract?
+        </p>
+        <input type="radio" id="yes" name="radio" />&nbsp;<label for="yes"
+          >Yes</label
+        >
+        <input type="radio" name="radio" />&nbsp;<label for="no">No</label>
+        <div class="after-yes d-none">
+          <label for="bdate">If yes, spouse's date of birth?(DD/MM/YY)</label>
+          <input type="text" class="dob" />
+          <br />
+          <label for="policy number">Insurance company policy number</label>
+          <input type="number" class="policy_num" />&nbsp;
+          <br>
+          <label for="certificate_no">Insurance company Certificate number</label>
+          <input type="number" class="certi_no"/>
+        </div>
+        <p class="subtxt02">2.Is any expense the result of an accident?</p>
+        <input type="radio" name="radio02" /><label for="yes">Yes</label>&nbsp;
+        <input type="radio" name="radio02" /><label for="no">No</label>
+        <div class="div02 d-none">
+          <label for="dateofaccident">If yes, Date of accident</label>
+          <input type="date" class="date_of_acc"/>
+          <br />
+          <label for="location">Location of accident</label>&nbsp;
+          <input type="radio" /><label for="work">Work</label
+          ><input type="radio" /><label for="home">Home</label
+          ><input type="radio" /><label for="other">Other</label>
+          <br>
+          <label for="explanation">Explain how accident accured:</label>&nbsp;
+          <input type="text">
+        </div>
+        <br>
+      </div>
+      
+      <h2 class="heading02">
+        DRUGS, VISION CARE.PARAMEDICAL SERVICES AND OTHERS-PATIENT INFORMATION
+      </h2>
+        <label for="p-name">Patient's name:</label><input type="text" id="p-name">&nbsp;
+        <label for="dob">Date of birth:</label><input type="date" id="dob">&nbsp;
+        <label for="Relationship">Relationship to plan member:</label><input type="text" id="plan">&nbsp;
+        <label for="Total-Charge">Total-Charge:</label><input type="text" id="total-charge">
+        <input type="button" onclick="addData()" value="Add data" class="button">
+        <br>
+        <table id="table" border="">
+          <tr>
+            <th>Patient's name</th>
+            <th>Date of birth</th>
+            <th>Relationship to plan member</th>
+            <th>Total-Charge</th>
+          </tr>
+        </table>
+    </div>
+
+  </body>
+  <script src="form-task01.js"></script>
+</html>
