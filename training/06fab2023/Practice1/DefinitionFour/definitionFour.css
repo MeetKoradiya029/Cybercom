@@ -1,0 +1,40 @@
+.main{
+    
+    width: max-content;
+    display: flex;
+    flex-direction: row;
+    margin-left: 10px;
+
+}
+.formLabel{
+    display: flex;
+    flex-direction: column;
+}
+.formInputs{
+    display: flex;
+    flex-direction: column;
+}
+input{
+    margin: 9px;
+    outline: none;
+
+}
+label{
+    margin: 10px;
+}
+form{
+    border:2px solid rgb(177, 175, 175);
+    width: max-content;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+}
+#submitButton{
+    margin-left: 25vh;
+    margin-right: 25vh;
+    width: 100px;
+    height: 30px;
+
+}
+
+

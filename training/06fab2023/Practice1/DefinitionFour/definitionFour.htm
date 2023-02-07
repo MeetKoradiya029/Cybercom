@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <link rel="stylesheet" href="definitionFour.css">
+    
+    
+</head>
+<body>
+    <div>
+        <form action="#">
+            <h2>Registration Form</h2>
+            <div class="main">
+                <div class="formLabel">
+                    <label for="first name">First Name:</label>
+                    <label for="last name">Last Name:</label>
+                    <label for="email">Email:</label>
+                    <label for="password">Password:</label>
+                </div>
+                <div class="formInputs" >
+                    <input type="text" id="firstName" autocomplete="off">
+                    <input type="text" id="lastName" autocomplete="off">
+                    <input type="email" id="email" autocomplete="off">
+                    <input type="password" id="password" autocomplete="off">
+                    
+                </div>
+            </div>
+            <button type="submit" onclick="validate()">Submit</button>
+
+        </form>
+    </div>  
+        <script src="definitionFour.js"></script>
+</body>
+</html>
