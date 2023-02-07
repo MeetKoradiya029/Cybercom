@@ -28,12 +28,14 @@ function validate() {
 
   //password validation:
 
-  if (password.length) {
-    if (!(regexPassword.test(password))) {
+  if (password.length >= 8) {
+    if (!regexPassword.test(password)) {
       alert(
-        "password must contains 8 characters, atleast one digit, one uppercase aplhabet and lowercase aplhabet, one  special character which includes !@#$%&*()-"
+        "password must contains atleast one digit, one uppercase aplhabet and lowercase aplhabet, one  special character which includes !@#$%&*()-"
       );
     }
+  } else {
+    alert("password should be minimum of 8 characters!");
   }
 
   alert("form submitted successfully");
