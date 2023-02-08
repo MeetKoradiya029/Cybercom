@@ -8,5 +8,14 @@ for(let i in num){
 }
 avg=sum/num.length
 
+var max=0;
+var index;
+for(i;i<num.length;i++){
+    if(num[i]>num[max]){
+        max=i
+    }
+}
+console.log("max:"+num[max])
+
 console.log("Sum : "+sum);
 console.log("Avg : "+parseInt(avg));
