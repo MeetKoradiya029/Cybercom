@@ -66,15 +66,8 @@ fruits.forEach( fruit => {
 console.log("indexOf():- "+fruits.indexOf("pineapple",1))
 
 //find():
-const obj = [
-    {
-        email:"abc@gmail.com",
-        name:'meet'
-    },
-    {
-        email:'xyz@gmail.com',
-        name:"xyz"
-    }
-]
+const obj = ["abc",'xyz','op','dj']
   
-console.log("find()  "+obj.find());
+console.log("find()  "+obj.find(function(current,index)=>{
+  
+}));
