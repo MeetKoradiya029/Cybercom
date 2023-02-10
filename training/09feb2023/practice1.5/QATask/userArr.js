@@ -22,6 +22,18 @@ userArr = [
                 }
             }
         }
+    },
+    {
+        user:{
+            name:"xyz",
+            age:22,
+            education:{
+                degree:{
+                    field:"BE",
+                    college:"Gec Bhavnagar"
+                }
+            }
+        }
     }
 ]
 
