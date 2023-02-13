@@ -1,17 +1,15 @@
 const a = async()=>{
     console.log("calling started")
-    setTimeout(()=>{
+    setTimeout(async()=>{
         
         console.log("output from a()")
         
     },5000)
-    await b()
-   
-    
+    await b() 
 }
 const b = async()=>{
 
-    setTimeout(()=>{
+    setTimeout(async()=>{
         
         console.log("output from b()")
 
@@ -22,7 +20,7 @@ const b = async()=>{
 
 }
 const c = async()=>{
-    setTimeout(()=>{
+    setTimeout(async()=>{
         console.log("output from c()")
     },15000)
 
