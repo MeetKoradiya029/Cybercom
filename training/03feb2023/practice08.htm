@@ -9,7 +9,7 @@
   </head>
   <body>
     <div class="main">
-      <form name="form1"action="#">
+      <form name="myform">
         <p class="heading">Personal Information</p>
         <div class="form01">
           <div class="labels-form01">
@@ -45,8 +45,8 @@
               required
             />
             <select name="gender" id="gender" class="inputs01" required>
-              <option value="1">Male</option>
-              <option value="2">Female</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
             </select>
           </div>
         </div>
@@ -110,7 +110,12 @@
           <div class="inputs-form03">
             <input type="text" id="address" name="address" class="inputs03" />
             <input type="text" id="city" name="city" class="inputs03" />
-            <select name="state" id="state" class="inputs03" onchange="selector()">
+            <select
+              name="state"
+              id="state"
+              class="inputs03"
+            
+            >
               <option value="" disabled selected hidden>Select state</option>
               <option value="gujarat">Gujarat</option>
               <option value="maharashtra">Maharashtra</option>
@@ -137,8 +142,9 @@
           <option value="mobile">Mobile</option>
           <option value="telephone">Telephone</option></select
         ><br />
-        <button type="submit" onclick="validate()">Submit</button>
       </form>
+        <button onclick="validate()">Submit</button>
+    
     </div>
     <script src="practice08.js"></script>
   </body>

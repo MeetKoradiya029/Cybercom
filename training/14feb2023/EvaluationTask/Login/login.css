@@ -1,0 +1,36 @@
+body{
+    align-items: center;
+}
+
+#main{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    flex-direction: column;
+    width: max-content;
+   
+}
+
+#loginForm {
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+    padding: 10px;
+    align-items: center;
+    background-color:aqua;
+}
+button{
+    width:100%;
+}
+#errorMail{
+    color: red;
+    font-size: 12px;
+}
+input{
+    width: 100%;
+}
+#errorPass{
+    color: red;
+    font-size: 12px;
+    
+}

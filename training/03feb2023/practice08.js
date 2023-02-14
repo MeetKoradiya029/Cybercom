@@ -25,29 +25,35 @@ function validate() {
     address: address,
   };
 
+  // let form  = document.forms['myform']['firstname'].value
+  // console.log(form)
   //Email validation:
   var rx =
     /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
-  if (email.match(rx)) {
-    alert("Valid email address!");
-  } else {
+  if (email != "" || !email.match(rx)) {
     alert("Invalid email address!");
-  }
-  if (email !== reEmail) {
+  }else if(email !== reEmail) {
     alert("email doesn't match");
-  }
-
-  //Password validation:
-  if (pass !== rePass) {
+  }else if (pass !== rePass) {
     alert("Entered Password doesn't match");
+  }else{
+    console.log("validation complete !")
   }
 
   localStorage.setItem("formData", JSON.stringify(formData));
 
-  var storedData = localStorage.getItem("formData");
+  if(localStorage.getItem("formData")){
+    let data  = JSON.parse(localStorage.getItem("formData"))
+    console.log(data)
+  }
+  // storedData.push(JSON.parse(localStorage.getItem("formData")))  
+ 
+ return
 
-  console.log(storedData);
-
-  return true;
 }
+
+
+
+
+

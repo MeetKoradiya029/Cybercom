@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="register.css">
+</head>
+<body>
+    <div id="main">
+    
+            <div id="regForm">
+                <input type="text" name="name" id="name" placeholder="Name">
+                <span id="nameErr"></span>
+                <input type="email" name="email" id="email" placeholder="Email">
+                <span id="emailErr"></span>
+                <input type="password" name="password" id="password" placeholder="Password">
+                <span id="passErr"></span>
+                <input type="password" name="rePass" id="rePass" placeholder="Re Enter Password">
+                <span id="rePassErr"></span>
+                <select name="cities" id="cities" >
+                    <option selected disabled hidden>Select city</option>
+                    <option value="ahmedabad">Ahmedabad</option>
+                    <option value="surat">Surat</option>
+                    <option value="junagadh">Junagadh</option>
+                    <option value="mumbai">Mumbai</option>
+                </select>
+
+                <select name="states" id="states">
+                    <option selected disabled hidden>Select state</option>
+                    <option value="gujarat">Gujarat</option>
+                    <option value="maharashtra">Maharashtra</option>
+                </select>
+                <div id="termsConditions">
+                    <input type="checkbox" id="terms"><label for="terms">Terms & Conditions</label>
+                </div>
+                <span id="termsErr"></span>
+                
+                <button onclick="validate()">Register</button>
+            </div>
+        
+    </div>
+    <script src="register.js"></script>
+</body>
+</html>
