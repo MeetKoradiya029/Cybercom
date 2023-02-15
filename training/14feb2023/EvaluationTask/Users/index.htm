@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Users</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body onload="user_list()">
+    <div class="navbar">
+      <p class="currentUser">user name</p>
+
+      <div class="navbar_items">
+        <div class="item" id="dashBoard" onclick="dash()">Dashboard</div>
+        <div class="item" id="users" onclick="userPage()">Users</div>
+        <div class="item" id="loginSessions">Login Sessions</div>
+        <div class="item" id="logout">Logout</div>
+      </div>
+    </div>
+    <div class="container">
+      <p class="title">Dashboard</p>
+      <h3 id="title">Add User</h3>
+
+      <div id="addUser">
+        <input type="text" placeholder="Name" id="name" />
+        <input type="email" placeholder="Email" id="email" />
+        <input type="password" placeholder="password" id="password" />
+        <input type="date" placeholder="Birth Date" id="birth_date" />
+
+      </div>
+      <span id="errorMsg"></span>
+      <br>
+      <button onclick="addUser()">Add User</button>
+      <br><br><br>
+      <div id="users">
+        <table id="usrDetails" border="">
+            <tr>
+                <td>Name</td>
+                <td>Email</td>
+                <td>Password</td>
+                <td>BirthDate</td>
+                <td>Age</td>
+                <td>Actions</td>
+            </tr>
+        </table>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>

@@ -1,4 +1,3 @@
-
 function validate() {
   let name = document.getElementById("name").value;
   let email = document.getElementById("email").value;
@@ -54,19 +53,55 @@ function validate() {
     return flag;
   }
 
-  let dataArr = [];
+  //---->------>------>------>------>------>------>------>------>------>
 
-  let data = {
-    name: name,
-    email: email,
-    pass: password,
-    city: city,
-    state: state,
-  },
+  let userData = JSON.parse(localStorage.getItem("adminUser"));
+  
+  // userData.split("");
+  console.log("type of userData: " + typeof userData);
+  console.log("userData" + userData);
+
+  if (userData && userData.length > 0) {
+    for (let i = 0; i < userData.length; i++) {
+      let userEmail = userData.find((m) => m.email == email);
+      if (!userEmail) {
+        
+
+        let data = {
+          name: name,
+          email: email,
+          pass: password,
+          city: city,
+          state: state,
+        };
+
+        userData.push(data);
+        localStorage.setItem("adminUser", JSON.stringify(userData));
+        alert("Registration Complete!")
+        window.location.assign("../Login/login.htm")
+      
+        
+      } else {
+        showErros("email", "user already exists!!");
+        flag = false
+        return flag
+      }
+    }
+  } else {
+    let data = {
+      name: name,
+      email: email,
+      pass: password,
+      city: city,
+      state: state,
+    };
+    alert("registration complete!!")
+    localStorage.setItem("adminUser", JSON.stringify([data]));
+    
+  }
+
 
   
-
-  localStorage.setItem("formData",JSON.stringify());
 
   return flag;
 }
