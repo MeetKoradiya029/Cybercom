@@ -1,10 +1,13 @@
 *{
     margin: 0;
     padding: 0;
+
 }
 body{
     display: flex;
     flex-direction: row;
+    
+
 }
 .navbar{
     
@@ -30,11 +33,19 @@ body{
     color: rgb(40, 39, 37);
     
 }
-#errorMsg{
-    color: red;
-    font-size: 11px;
+  .currentUser{
+    margin-left: 14%;
+    margin-top: 20px;
 }
 
-.d-none{
-    display: none;
+.body{
+    width: 1260px;
+    border: 1px solid black;
+    
+}
+.body .title{
+    margin-left: 70px;
+    margin-top: 10%;
+    font-size: 25px;
+    font-weight: 600;
 }

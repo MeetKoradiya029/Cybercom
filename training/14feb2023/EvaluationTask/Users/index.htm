@@ -7,9 +7,9 @@
     <title>Users</title>
     <link rel="stylesheet" href="index.css" />
   </head>
-  <body onload="user_list()">
+  <body>
     <div class="navbar">
-      <p class="currentUser">user name</p>
+      <h3 id="label"></h3>
 
       <div class="navbar_items">
         <div class="item" id="dashBoard" onclick="dash()">Dashboard</div>
@@ -31,7 +31,8 @@
       </div>
       <span id="errorMsg"></span>
       <br>
-      <button onclick="addUser()">Add User</button>
+      <button onclick="addUser()" id="add-btn" class="">Add User</button>
+      <button onclick="updateUser()" id="edit-btn" class="d-none">Update User</button>
       <br><br><br>
       <div id="users">
         <table id="usrDetails" border="">

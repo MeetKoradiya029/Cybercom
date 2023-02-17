@@ -56,7 +56,7 @@ function validate() {
   //---->------>------>------>------>------>------>------>------>------>
 
   let userData = JSON.parse(localStorage.getItem("adminUser"));
-  
+
   // userData.split("");
   console.log("type of userData: " + typeof userData);
   console.log("userData" + userData);
@@ -65,8 +65,6 @@ function validate() {
     for (let i = 0; i < userData.length; i++) {
       let userEmail = userData.find((m) => m.email == email);
       if (!userEmail) {
-        
-
         let data = {
           name: name,
           email: email,
@@ -77,14 +75,12 @@ function validate() {
 
         userData.push(data);
         localStorage.setItem("adminUser", JSON.stringify(userData));
-        alert("Registration Complete!")
-        window.location.assign("../Login/login.htm")
-      
-        
+        alert("Registration Complete!");
+        window.location.assign("../Login/login.htm");
       } else {
         showErros("email", "user already exists!!");
-        flag = false
-        return flag
+        flag = false;
+        return flag;
       }
     }
   } else {
@@ -95,13 +91,16 @@ function validate() {
       city: city,
       state: state,
     };
-    alert("registration complete!!")
+    alert("registration complete!!");
     localStorage.setItem("adminUser", JSON.stringify([data]));
-    
   }
-
-
+  let session ={
+    name:name,
+  }
+  debugger
   
+ 
+
 
   return flag;
 }
