@@ -39,8 +39,7 @@ INSERT INTO students (student_name,contact_no,college_id)
 VALUES ("Raj Javiya",'8238949574',2);
 
 
-SELECT s.student_name from students as s 
-inner join c.
+
 
 
 
