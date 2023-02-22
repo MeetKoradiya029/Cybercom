@@ -18,11 +18,11 @@ CREATE TABLE Salery (
 );
 -- truncate table salery; 
 
-insert into Salery(name,sex, salery) values("smit",'m',15000);
-insert into Salery(name,sex, salery) values("arjun",'m',18000);
-insert into Salery(name,sex, salery) values("priya",'f',35000);
-insert into Salery(name,sex, salery) values("honey",'f',50000);
-insert into Salery(name,sex, salery) values("kriti",'f',40000);
+insert into Salery values("smit",'m',15000);
+insert into Salery values("arjun",'m',18000);
+insert into Salery values("priya",'f',35000);
+insert into Salery values("honey",'f',50000);
+insert into Salery values("kriti",'f',40000);
 
 update Salery 
 SET sex = CASE

@@ -14,11 +14,11 @@ create table Employee (
     job_title varchar(256) not null,
     primary key(id)
 );
-insert into employee (name,email,phone_no,hire_date,job_title) values ("MIKE PEAR","mike@gmail.com","7898456512","2022-06-01","Jr. WebDev");
-insert into employee (name,email,phone_no,hire_date,job_title) values ("john doe","john@gmail.com","7898456545","2022-06-01","Jr. WebDev");
-insert into employee (name,email,phone_no,hire_date,job_title) values ("Nikhil Sharma","nikhil@gmail.com","8898456512","2022-01-01","Jr. Mobile app. Dev");
-insert into employee (name,email,phone_no,hire_date,job_title) values ("james bond","bond@yahoo.com","7894565123","2015-02-01","QA");
-insert into employee (name,email,phone_no,hire_date,job_title) values ("Tony stark","tony@gmail.com","7798456512","2010-05-01","MD");
+insert into employee values ("MIKE PEAR","mike@gmail.com","7898456512","2022-06-01","Jr. WebDev");
+insert into employee values ("john doe","john@gmail.com","7898456545","2022-06-01","Jr. WebDev");
+insert into employee values ("Nikhil Sharma","nikhil@gmail.com","8898456512","2022-01-01","Jr. Mobile app. Dev");
+insert into employee values ("james bond","bond@yahoo.com","7894565123","2015-02-01","QA");
+insert into employee values ("Tony stark","tony@gmail.com","7798456512","2010-05-01","MD");
 
 
 create table leaveApp(
