@@ -8,5 +8,25 @@
  <ul *ngFor="let i of arr">
     <li>{{i.name}}</li>
  </ul>
+<input [(ngModel)]="username" type="text" >
+<p>{{username}}</p>
+<h2 *ngIf="flag" ngClass="">{{username}}</h2>
+ <button (click)="onClick()">Change</button>
 
+
+<br>
+<br>
+<input #task type="text" />
+<select name="category" #category>
+  <option value="hard" default>Hard</option>
+  <option value="medium">Medium</option>
+  <option value="easy">Easy</option>
+</select>
+<button (click) = 'store(task.value,category.value)'>Add</button>
+
+<div>
+
+  <h1  *ngFor = 'let item of taskArr' [ngClass]=item.category>{{item.task}}</h1>
+
+</div>
 </div>
