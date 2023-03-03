@@ -1,22 +1,15 @@
 <div>
+  <!-- This is header. hello world!
 
-  
-    This is header.
-  
-  hello world!
+  <ul *ngFor="let i of arr">
+    <li>{{ i.name }}</li>
+  </ul>
+  <input [(ngModel)]="username" type="text" />
+  <p>{{ username }}</p>
+  <h2 *ngIf="flag" ngClass="">{{ username }}</h2>
+  <button (click)="onClick()">Change</button> -->
 
- <ul *ngFor="let i of arr">
-    <li>{{i.name}}</li>
- </ul>
-<input [(ngModel)]="username" type="text" >
-<p>{{username}}</p>
-<h2 *ngIf="flag" ngClass="">{{username}}</h2>
- <button (click)="onClick()">Change</button>
-
-
-<br>
-<br>
-<input #task type="text" />
+  <!-- <input #task type="text" />
 <select name="category" #category>
   <option value="hard" default>Hard</option>
   <option value="medium">Medium</option>
@@ -28,5 +21,55 @@
 
   <h1  *ngFor = 'let item of taskArr' [ngClass]=item.category>{{item.task}}</h1>
 
+</div> -->
+
+  <!-- <input type="text" name="todo-1" #todo />
+
+  <label for="priority-1">Priority:</label>
+  <select id="priority-1" name="priority-1" #sel>
+    <option *ngFor="let item of priorityArr" [value]="item">{{ item }}</option>
+  </select>
+
+  <button (click)="getTask(todo.value, sel.value)">ADD</button>
+  <br />
+  <ul *ngFor="let item of taskarr; let i = index">
+    <li [class]="item.priority">
+      {{ item.name }} <Button type="button" (click)="delete(i)">Delete</Button>
+    </li>
+  </ul>
+</div> -->
+
+<!-- ------------------------------------------------------------------------------------------ -->
+
+
+<!-- <input
+  (keyup)="changeImage($event)"
+  [value]="imgUrl"
+/>
+
+<div #img><app-post [img]="imgUrl" (im)="logImg($event)">
+  <p>Hello thiss is beautifull image</p>
+</app-post></div> -->
+
+
+<div>
+  <app-users>
+   
+  </app-users>
+
+  
 </div>
-</div>
+
+<ul>
+  <li *ngFor=""></li>
+</ul>
+
+<nav>
+  <ul>
+    <li><a routerLink="/login" routerLinkActive="active">Login</a></li>
+    <li><a routerLink="/register" routerLinkActive="active">Register</a></li>
+  </ul>
+</nav>
+
+
+<router-outlet></router-outlet>

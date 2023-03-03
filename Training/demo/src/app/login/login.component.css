@@ -1,0 +1,19 @@
+.main{
+    width: max-content;
+    background-color: rgb(190, 213, 255);
+}
+
+.loginForm{
+    display: grid;
+    grid-template-columns: auto;
+    row-gap: 10px;
+    width: max-content;
+}
+button{
+    background-color: blue;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    height: 30px;
+}

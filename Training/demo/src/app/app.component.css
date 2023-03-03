@@ -1,7 +1,4 @@
-ul{
-    list-style:none;
-    color: blue;
-}
+
 .red-class{
     color: red;
 }
@@ -14,4 +11,41 @@ ul{
 }
 .low{
     background-color: aquamarine;
+}
+
+.low {
+    background-color: green;
+    color: white;
+  }
+  .medium {
+    background-color: orangered;
+    color: white;
+  }
+  .high {
+    background-color: red;
+    color: white;
+  }
+  
+  li {
+    margin-bottom: 8px;
+    background-color: rgb(219, 219, 219);
+  }
+  
+  button {
+    margin-left: 8px;
+  }
+
+#img{
+  width: 200px;
+  height: 400px;
+}
+
+nav ul{
+  display: flex;
+  flex-direction: row;
+  
+}
+
+nav ul li{
+  margin: 20px;
 }

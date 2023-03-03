@@ -1,0 +1,11 @@
+<div class="main">
+
+    <h2>Login Here!</h2>
+    <div class="loginForm">
+        <input type="email" #email placeholder="Enter email">
+        <input type="password" #password placeholder="enter password"> 
+        <button type="submit" routerLink="/home" routerLinkActive="active" (click)="hide()">Submit</button>
+    </div>
+</div>
+
+<router-outlet></router-outlet>
