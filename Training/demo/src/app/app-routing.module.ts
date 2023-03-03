@@ -9,10 +9,10 @@ import { UsersComponent } from './users/users.component';
 
 const routes: Routes = [
   {path:'',component:UsersComponent},
-  {path:'userDetails',component:UserDetailsComponent},
   {path:"login",component:LoginComponent},
   {path:"register",component:RegisterComponent},
-  {path:"home",component:HomeComponent}
+  {path:"home",component:HomeComponent},
+  {path:'users/:id',component:UserDetailsComponent}
 
 ];
 
