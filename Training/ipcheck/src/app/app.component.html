@@ -1,0 +1,26 @@
+<div class="g-btn" *ngIf="!user">
+  <asl-google-signin-button  class="g-logo">
+  </asl-google-signin-button>
+  <span> Google Sign In</span>
+</div>
+  
+  <!-- <nav class="navBar" *ngIf="user">
+    <div>
+      <img src="{{user.photoUrl}}" width="30px" height="30px" style="border-radius: 50%;">
+    </div>
+    <div>
+      <p>{{user.email}}</p>
+    </div>
+  </nav> -->
+
+  <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs" *ngIf="user">
+    <li [ngbNavItem]="1">
+      <ng-template ngbNavContent>
+        <img src="{{user.photoUrl}}" alt="" width="30px" height="30px" style="border-radius: 50%;">
+        <p>{{user.email}}</p>
+      </ng-template>
+    </li>
+  <div *ngIf="user">
+    <h1>Welcome {{user.name}}</h1>
+    <app-iplookup></app-iplookup>
+  </div>
