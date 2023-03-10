@@ -4,4 +4,5 @@
     <li *ngFor="let items of beverages">{{items}}</li>
   </ul>
   <app-beverages [beverage]="currentBeverage" (newBeverageEvent)="addBeverage($event)"></app-beverages>
+  <app-course></app-course>
 </div>

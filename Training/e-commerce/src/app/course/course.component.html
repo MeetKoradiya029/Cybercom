@@ -1,0 +1,17 @@
+<div class="main">
+  <div class="card" *ngFor="let item of data">
+    <div class="img">
+      <img src="{{ item.imgUrl }}" width="330" height="200" />
+    </div>
+    <div class="cardtxt">
+      <div class="title">
+        {{ item.title }}
+      </div>
+      <div class="creator"> 
+        {{ item.creator }}
+      </div>
+      <div class="rating">{{ item.rating }}/5</div>
+      <div class="price">₹{{ item.price }}</div>
+    </div>
+  </div>
+</div>
