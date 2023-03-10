@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'e-commerce';
+  currentBeverage = 'coffie'
+  beverages : string[] =['tea','coffee','miklshake'];
+  
+  addBeverage(newBeverage:string){
+    this.beverages.push(newBeverage);
+  }
 }
