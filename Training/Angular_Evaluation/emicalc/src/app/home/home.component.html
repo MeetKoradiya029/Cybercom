@@ -1,0 +1,67 @@
+<div class="container main">
+    <div class="row">
+        <div class="col-6">
+            <div class="container">
+                <h1>EMI Calculator</h1>
+                <div class="form-group">
+                  <label for="loanAmount">Loan Amount (in Rs.)</label>
+                  <input type="number" class="form-control"  id="loanAmount" [(ngModel)]="principle" (keyup)="calculateEMI()">
+                </div>
+                <div class="form-group">
+                  <label for="interestRate">Interest Rate (in %)</label>
+                  <input type="number" class="form-control"  id="interestRate" [(ngModel)]="rate" (keyup)="calculateEMI()">
+                </div>
+                <div class="form-group">
+                  <label for="loanTenure">Loan Tenure (in months)</label>
+                  <input type="number" class="form-control"  id="loanTenure" [(ngModel)]="months" (keyup)="calculateEMI()">
+                </div>
+                
+                <div class="form-group">
+                  <label for="emiAmount">EMI Amount (in Rs.)</label>
+                  <input type="text" class="form-control" id="emiAmount" [value]="resultEMI">
+                </div>
+              </div>
+              
+        </div>
+        <div class="col-6">
+            <div class="col">
+                <label for="emi">Monthly EMI</label>
+                <input type="number" class="form-control" id="loanAmount" [value]="resultEMI">
+            </div>
+            <div class="col">
+                <label for="emi">Total Interest Amount</label>
+                <input type="number" class="form-control" id="loanAmount" [value]="totalIntrest">
+            </div>
+            <div class="col">
+                <label for="emi">Total Payable Amount</label>
+                <input type="number" class="form-control" id="loanAmount" [value]="totalPayable">
+            </div>
+        </div>
+    </div>
+
+    <div class="conatiner_table">
+      <table class="table" border="1">
+          <thead>
+            <tr>
+                <th>Payment No.</th>
+                <th>Begining Balance</th>
+                <th>EMI</th>
+                <th>Principal</th>
+                <th>Interest</th>
+                <th>Ending Balance</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of tableObj">
+              <td>{{item.index}}</td>
+              <td>{{item.bb}}</td>
+              <td>{{item.emi}}</td>
+              <td>{{item.pri}}</td>
+              <td>{{item.interest}}</td>
+              <td>{{item.end}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>       
+
+</div>

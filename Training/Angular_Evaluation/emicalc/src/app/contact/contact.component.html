@@ -1,0 +1,103 @@
+<div class="container">
+  <h1 class="h1">Get In Touch</h1>
+  <p class="h5">Reach out to us & we will respond as soon as we can.</p>
+  <form class="row g-3" [formGroup]="contactForm">
+    <div class="col-md-4">
+      <input
+        type="email"
+        class="form-control"
+        id="inputEmail4"
+        placeholder="Name"
+        formControlName="name"
+      />
+      <div
+        class="txt-danger"
+        *ngIf="
+          contactForm.get('name')?.invalid &&
+          (contactForm.get('name')?.dirty || contactForm.get('name')?.touched)
+        "
+      >
+        <span
+          class="text-danger"
+          *ngIf="contactForm.get('name')?.errors?.['required']"
+          >Name is required.</span
+        >
+      </div>
+    </div>
+    <div class="col-md-4">
+      <input
+        type="email"
+        class="form-control"
+        id="inputPassword4"
+        placeholder="Email"
+        formControlName="email"
+      />
+      <div
+        *ngIf="
+          contactForm.get('email')?.invalid &&
+          (contactForm.get('email')?.dirty || contactForm.get('email')?.touched)
+        "
+      >
+        <span
+          class="text-danger"
+          *ngIf="contactForm.get('email')?.errors?.['required']"
+          >Enter Email</span
+        >
+        <span
+          class="text-danger"
+          *ngIf="contactForm.get('email')?.errors?.['email']"
+          >Invalid Email</span
+        >
+      </div>
+    </div>
+    <div class="col-4">
+      <input
+        type="text"
+        class="form-control"
+        id="inputAddress"
+        placeholder="Pnone"
+        formControlName="phone"
+      />
+      <div
+        *ngIf="
+          contactForm.get('phone')?.invalid &&
+          (contactForm.get('phone')?.dirty || contactForm.get('phone')?.touched)
+        "
+      >
+        <span class="text-danger" *ngIf="contactForm.get('phone')?.errors?.['required']">
+            Phone number is required
+        </span>
+        <span class="text-danger" *ngIf="contactForm.get('phone')?.errors?.['minlength']">
+            Length should be minimum of 10
+        </span>
+    </div>
+    </div>
+    <div class="col-12">
+      <textarea
+        class="form-control"
+        placeholder="Leave a message here"
+        id="floatingTextarea"
+        formControlName="message"
+      ></textarea>
+      
+      <div
+        *ngIf="
+          contactForm.get('message')?.invalid &&
+          (contactForm.get('message')?.dirty ||
+            contactForm.get('message')?.touched)
+        "
+      >
+        <span
+          class="text-danger"
+          *ngIf="contactForm.get('message')?.errors?.['required']"
+        >
+          Enter any message here
+        </span>
+      </div>
+    </div>
+
+    <div class="col-12">
+      <button type="submit" class="btn btn-primary" (click)="validateForm()">Sign in</button>
+    </div>
+  </form>
+</div>
