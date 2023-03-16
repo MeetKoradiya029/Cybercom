@@ -25,7 +25,7 @@ export class HomeComponent implements OnInit {
     const numerator =
       this.principle * monthlyRate * Math.pow(1 + monthlyRate, this.months);
     const denominator = Math.pow(1 + monthlyRate, this.months) - 1;
-    this.resultEMI = numerator / denominator;
+    this.resultEMI = (numerator / denominator)
     this.totalPayable = this.resultEMI * this.months;
     this.totalIntrest = this.totalPayable - this.principle;
     this.interestPercentage = (this.totalIntrest * 100)/this.totalPayable;

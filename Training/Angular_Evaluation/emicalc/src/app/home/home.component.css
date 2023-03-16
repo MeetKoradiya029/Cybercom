@@ -3,6 +3,7 @@
     border-radius: 5px;
     padding-bottom: 30px;
     padding-top: 20px;
+    
 }
 
 .emiData{
@@ -10,4 +11,9 @@
     border-radius: 5px;
     padding-bottom: 30px;
     padding-top: 20px; 
+}
+.wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
