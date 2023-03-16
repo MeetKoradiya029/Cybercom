@@ -1,19 +1,19 @@
 <div class="container main">
-    <div class="row">
-        <div class="col-6">
+    <div class="row m-3">
+        <div class="col-6  emiContainer">
             <div class="container">
                 <h1>EMI Calculator</h1>
                 <div class="form-group">
                   <label for="loanAmount">Loan Amount (in Rs.)</label>
-                  <input type="number" class="form-control"  id="loanAmount" [(ngModel)]="principle" (keyup)="calculateEMI()">
+                  <input type="range" class="form-range" min="30000" max="50000000" id="loanAmount" [(ngModel)]="principle" (input)="calculateEMI()">
                 </div>
                 <div class="form-group">
                   <label for="interestRate">Interest Rate (in %)</label>
-                  <input type="number" class="form-control"  id="interestRate" [(ngModel)]="rate" (keyup)="calculateEMI()">
+                  <input type="range" class="form-range" min="8" max="16" id="interestRate" [(ngModel)]="rate" (input)="calculateEMI()">
                 </div>
                 <div class="form-group">
                   <label for="loanTenure">Loan Tenure (in months)</label>
-                  <input type="number" class="form-control"  id="loanTenure" [(ngModel)]="months" (keyup)="calculateEMI()">
+                  <input type="range" class="form-range" id="loanTenure" min="120" max="360" [(ngModel)]="months" (input)="calculateEMI()">
                 </div>
                 
                 <div class="form-group">
@@ -23,19 +23,25 @@
               </div>
               
         </div>
-        <div class="col-6">
+        <div class="col-6 emiData">
+
             <div class="col">
-                <label for="emi">Monthly EMI</label>
-                <input type="number" class="form-control" id="loanAmount" [value]="resultEMI">
+                <div class="text">Monthly EMI</div>
+                <div class="h2">{{resultEMI}}</div>
             </div>
             <div class="col">
-                <label for="emi">Total Interest Amount</label>
-                <input type="number" class="form-control" id="loanAmount" [value]="totalIntrest">
+              <div class="text">Total Interest</div>
+              <div class="h2">{{totalIntrest }}</div>
             </div>
             <div class="col">
-                <label for="emi">Total Payable Amount</label>
-                <input type="number" class="form-control" id="loanAmount" [value]="totalPayable">
+
+              <div class="text">Total Payable Amount</div>
+              <div class="h2">{{totalPayable}}</div>
             </div>
+            <div class="col">
+              <div class="text">Interest Percentage</div>
+              <div class="h2">{{interestPercentage}}</div>
+          </div>
         </div>
     </div>
 
@@ -49,16 +55,16 @@
                 <th>Principal</th>
                 <th>Interest</th>
                 <th>Ending Balance</th>
-            </tr>
+            </tr> 
           </thead>
           <tbody>
-            <tr *ngFor="let item of tableObj">
+            <tr *ngFor="let item of tableData()">
               <td>{{item.index}}</td>
-              <td>{{item.bb}}</td>
+              <td>{{item.beg_bal}}</td>
               <td>{{item.emi}}</td>
-              <td>{{item.pri}}</td>
+              <td>{{item.principle}}</td>
               <td>{{item.interest}}</td>
-              <td>{{item.end}}</td>
+              <td>{{item.end_bal}}</td>
             </tr>
           </tbody>
         </table>
