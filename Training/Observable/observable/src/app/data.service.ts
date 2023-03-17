@@ -3,15 +3,14 @@ import { Subject } from 'rxjs';
 import { Message } from './message';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class DataService {
-
   private data = new Subject<string>();
 
   data$ = this.data.asObservable();
 
-  setData(value:string){
+  setData(value: string) {
     this.data.next(value);
   }
 
@@ -28,5 +27,4 @@ export class DataService {
     this.messages.push(message);
     this.messagesSubject.next(this.messages);
   }
-
 }

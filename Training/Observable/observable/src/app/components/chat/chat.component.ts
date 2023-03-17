@@ -9,17 +9,18 @@ import { Message } from 'src/app/message';
   templateUrl: './chat.component.html',
   styleUrls: ['./chat.component.css']
 })
-export class ChatComponent implements OnInit{
+export class ChatComponent{
 
     messages$:Observable<Message[]>
     messageText = '';
 
     constructor(private messageService:DataService){}
+  debugger;
   ngOnInit():void{
-    this.messages$ = this.messageService.getMessages().pipe(
-      map(messages=>messages.reverse())
-    )
+    this.messages$ = this.messageService.getMessages()
   }
+
+  // By calling the getMessages method in the ngOnInit method, we are ensuring that the messages are retrieved from the server and stored in the messages$ property before the component is rendered in the view. This way, we can be sure that the component has access to the latest data when it is rendered.
 
   sendMessage(){
     if(this.messageText.trim()===""){
@@ -27,13 +28,14 @@ export class ChatComponent implements OnInit{
     }
 
     const message:Message={
-      username:"mmk",
+      username:"Meet Koradiya",
       timestamp:new Date().toLocaleString(),
       message:this.messageText.trim()
     }
 
     this.messageService.sendMessage(message);
     this.messageText='';
+   
   }
 
   
