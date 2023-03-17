@@ -1,0 +1,38 @@
+.chat-window {
+    height: 400px;
+    overflow-y: scroll;
+  }
+  
+  .message {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f1f1f1;
+  }
+  
+  .message .username {
+    font-weight: bold;
+  }
+  
+  .message .timestamp {
+    margin-left: 10px;
+    font-size: 12px;
+    color: #777;
+  }
+  
+  .input-group {
+    margin-top: 10px;
+  }
+  
+  .input-group input {
+    border-radius: 5px;
+    border: none;
+    padding: 10px;
+    width: 80%;
+  }
+  
+  .input-group button {
+    border-radius: 5px;
+    margin-left: 10px;
+  }
+  
