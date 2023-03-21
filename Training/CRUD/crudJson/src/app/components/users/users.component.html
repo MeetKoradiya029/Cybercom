@@ -1,7 +1,25 @@
 <div class="container">
-    <button class="btn btn-primary" routerLink="/adduser" routerLinkActive="active">
-        Add User
-    </button>
+  <button
+    class="btn btn-primary"
+    routerLink="/adduser"
+    routerLinkActive="active"
+  >
+    Add User
+  </button>
 </div>
+
+<ul>
+  <li *ngFor="let item of users">
+    {{ item.email }}
+    <button
+      type="button"
+      class="btn btn-primary"
+      [routerLink]="['/edituser', item.id]"
+    >
+      edit
+    </button>
+    <button class="btn btn-danger" (click)="delete(item.id)">delete</button>
+  </li>
+</ul>
 
 <router-outlet></router-outlet>

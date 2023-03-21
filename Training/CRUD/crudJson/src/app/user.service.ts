@@ -25,12 +25,38 @@ export class UserService {
     }
   }
   
-  getUser(body:UserModel){
+  getUser(){
     try {
-      return this.http.get(this.baseUrl+this.userListUrl);
+      return this.http.get<any>(this.baseUrl+this.userListUrl);
     } catch (error:any) {
       return throwError(()=>Error(error))
     }
   }
+
+  getUserDetails(id:string){
+    try {
+      return this.http.get<any>(this.baseUrl+this.userListUrl+"/"+id);
+    } catch (error:any) {
+      return throwError(()=> new Error(error))
+    }
+  }
+
+  updateUser(userId:string,body:UserModel){
+    try {
+      return this.http.put<any>(this.baseUrl+this.userListUrl+"/"+userId,body);
+    } catch (error:any) {
+      return throwError(()=> new Error(error));
+    }
+  }
+
+  deleteUser(userId:string){
+    try {
+      return this.http.delete<any>(this.baseUrl+this.userListUrl+"/"+userId);
+    } catch (error:any) {
+      return throwError(()=>new Error(error))
+    }
+  }
+
+
 
 }
