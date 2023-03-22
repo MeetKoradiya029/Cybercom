@@ -1,0 +1,45 @@
+<div class="container">
+    <!-- <form [formGroup]="qualificationForm">
+        <div formArrayName="qualifications">
+          <div *ngFor="let qualification of qualifications.controls; let i=index">
+            <div [formGroupName]="i">
+              <label>
+                Degree:
+                <input formControlName="degree">
+              </label>
+              <label>
+                Institution:
+                <input formControlName="institution">
+              </label>
+              <button (click)="removeQualification(i)">Remove</button>
+            </div>
+          </div>
+        </div>
+        <button (click)="addQualification()">Add Qualification</button>
+        <button type="submit">Submit</button>
+      </form> -->
+
+      <form [formGroup]="skillForm">
+        <div formArrayName="skills">
+            <div *ngFor="let skill of skills.controls; let i=index" class="form-group">
+                <div [formGroupName]="i" class="row align-items-center">
+                    <div class="col-sm-4">
+                        <label for="skill{{i}}">Skill:</label>
+                        <input type="text" class="form-control" formControlName="name" id="skill{{i}}">
+                    </div>
+                    <div class="col-sm-4">
+                        <label for="experience{{i}}">Experience(Years):</label>
+                        <input type="text" class="form-control" formControlName="experience" id="experience{{i}}">
+                    </div>
+                    <div class="col-sm-4">
+                        <button type="button" class="btn btn-danger" (click)="removeSkill(i)">Delete</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    <button type="button" class="btn btn-primary" (click)="addSkill()">Add Skill</button>
+
+      </form>
+      
+</div>

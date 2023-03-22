@@ -46,7 +46,7 @@ function validate() {
         let sessionData = {
           email:email,
         }
-        session.push(lsessionData)
+        session.push(sessionData)
         sessionStorage.setItem("userLog",JSON.stringify(session));
       }else{
         let sessionData = {
